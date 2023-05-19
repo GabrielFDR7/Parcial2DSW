@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ListarComponent } from './Listar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ListarComponent', () => {
   let component: ListarComponent;
@@ -11,7 +12,8 @@ describe('ListarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListarComponent ]
+      declarations: [ ListarComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   }));
